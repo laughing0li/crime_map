@@ -1,0 +1,98 @@
+.map-container {
+    height: 400px;
+  }
+  
+  /* 显示数据的小窗口 */
+  .sidebar {
+    background-color: rgba(35, 55, 75, 0.7);
+    color: #ffffff;
+    padding: 6px 12px;
+    font-family: monospace;
+    z-index: 1;
+    position: absolute;
+    top: 20;
+    left: 100;
+    margin: 12px;
+    border-radius: 4px;
+  }
+  
+  h2,
+  h3 {
+    margin: 10px;
+    font-size: 1.2em;
+  }
+  
+  h3 {
+    font-size: 1em;
+  }
+  
+  p {
+    font-size: 0.85em;
+    margin: 10px;
+    text-align: left;
+  }
+  
+  /**
+  * Create a position for the map
+  * on the page */
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /**
+  * Set rules for how the map overlays
+  * (information box and legend) will be displayed
+  * on the page. */
+  /* 用于显示对颜色的深浅的解释 */
+  /* .map-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    margin-right: 20px;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    border-radius: 3px;
+  } */
+  
+  #features {
+    top: 0;
+    height: 100px;
+    margin-top: 20px;
+    width: 250px;
+  }
+  
+  #legend {
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 18px;
+    height: 150px;
+    margin-bottom: 40px;
+    width: 100px;
+  }
+  
+  .legend-key {
+    display: inline-block;
+    border-radius: 20%;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+  
+  .quakeInfo {
+    /* float: right; */
+    position: absolute;
+    font-family: sans-serif;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 5px;
+    width: 20%;
+    border: 2px solid black;
+    font-size: 14px;
+    color: #222;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 3px;
+  }
