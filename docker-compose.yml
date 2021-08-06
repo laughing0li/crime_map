@@ -15,7 +15,6 @@ services:
             web:
                 aliases: 
                     - web-db.local
-        # command: bash -c "cd docker-entrypoint-initdb.d && psql -U banjo -d map -f init.sql"
     web:
         build: .
         restart: always
