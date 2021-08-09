@@ -41,19 +41,19 @@ export default function Display() {
         setYearOptions(x_Axis)
 
         // 获取到所有种类的offence
-        for (let i = 0; i < data.length; i++) {
-            offences.add(data[i]['offence'])
-        }
-        // 将每一个offence对应的年份的总数封装到details字典集合中
-        for (let item of offences) {
+        data.map(item => {
+            return offences.add(item['offence'])
+        })
+
+        offences.forEach(item => {
             const newList = []
-            data.forEach(element => {
+            data.map(element => {
                 if (item === element['offence']) {
                     newList.push(element['total_annual'])
                 }
-            });
-            details[item] = newList
-        }
+                return details[item] = newList
+            })
+        })
 
         // 封装一个series列表，就不需要一个一个的添加series
         let series = []

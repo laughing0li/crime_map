@@ -14,11 +14,10 @@ export default function YearlyDisplay() {
             key_list.push(i)
         }
         // 获取到月份的key
-        const se_list = key_list.slice(start, end)
-        for (let i = 0; i < se_list.length; i++) {
-            // 将月份的value存到新建的newDict里面
-            newDict.push(dict[se_list[i]])
-        }
+        const month_list = key_list.slice(start, end)
+        month_list.map(item => {
+            return newDict.push[dict[item]]
+        })
         return newDict
     }
 
@@ -26,20 +25,21 @@ export default function YearlyDisplay() {
         if (!dataForYear) return;
         // 声明一个数组，用于接收字典里面的key，key就是月份，total_annaul这些
         const keys = []
-        for (let i in dataForYear[1]) {
-            keys.push(i)
-        }
+      
+        dataForYear[1].map(item => {
+            return keys.push(item)
+        })
 
         const offences = new Set()
         // 获取到所有种类的offence
-        for (let i = 0; i < dataForYear.length; i++) {
-            offences.add(dataForYear[i]['offence'])
-        }
+        dataForYear.map(item => {
+            return offences.add(item['offence'])
+        })
 
         const details = {}
-        for (let i = 0; i < dataForYear.length; i++) {
-            details[dataForYear[i]['offence']] = slice_dict(dataForYear[i], 5, 17)
-        }
+        dataForYear.map(item => {
+            return details[item['offence']] = slice_dict(item, 5, 17)
+        })
 
         // 封装一个series列表，就不需要一个一个的添加series
         let series = []

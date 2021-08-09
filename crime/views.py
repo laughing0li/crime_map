@@ -16,7 +16,7 @@ def offence_list(request, region):
     return JsonResponse(serializer.data, safe=False)
 
 def offence_list_yearly(request, region ,year):
-    offences = Crime.objects.filter(locality=region, financial_year=year).order_by(('total_annual'))
+    offences = Crime.objects.filter(locality=region, financial_year=year).order_by('offence')
 
     serializer = CrimeSerializer(offences, many=True)
     
